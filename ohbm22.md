@@ -2,7 +2,7 @@
 marp: false
 theme: poster
 paginate: false
-size: 33:44
+size: 33:50
 math: katex
 ---
 
@@ -98,7 +98,7 @@ math: katex
 
 ## Do changes in genome cause changes in connectomes?
 
-![](./ohbm22/dag.png)
+![w:1000px center](./ohbm22/dag.png)
 **Fig 2:** Overview of the framework for measuring heritability of connectomes.
 
 <br>
@@ -181,7 +181,11 @@ math: katex
 
 <!-- Logo for a package -->
 
+<p style="text-align: center;">
+
 **hyppo**
+
+</p>
 
 </div>
 <div>
