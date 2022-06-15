@@ -176,6 +176,31 @@ math: katex
 </div>
 </div>
 
+<div class="columns3-np">
+<div>
+
+<!-- Logo for a package -->
+
+**hyppo**
+
+</div>
+<div>
+
+<!-- Badges for a package -->
+
+[![h:.4in](https://pepy.tech/badge/hyppo)](https://pepy.tech/project/hyppo)
+[![h:.4in](https://img.shields.io/github/stars/neurodata/hyppo?style=social)](https://github.com/neurodata/hyppo)
+
+</div>
+<div>
+
+<!-- QR code to a package -->
+
+![center h:1in](./ohbm22/hyppo-qr.svg)
+
+</div>
+</div>
+
 <br>
 
 #### Acknowledgements
@@ -191,7 +216,7 @@ NeuroData lab for many ideas and feedback. Many at Microsoft Research for w/ gra
 
 <!-- Need these breaks <br> between refs otherwise formatting breaks for some reason -->
 <footer>
-[1] Winding, Pedigo et al. "The complete connectome of an insect brain," In preparation (2022)
+[1] Chung et al. "The complete connectome of an insect brain," In preparation (2022)
 <br>
 [2] Chung et al. "Statistical connectomics," Ann. Rev. Statistics and its Application (2021)
 <br>
