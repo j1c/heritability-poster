@@ -1,8 +1,9 @@
 ---
-marp: true
+marp: false
 theme: poster
 paginate: false
 size: 33:44
+math: katex
 ---
 
 <!-- Start header -->
@@ -51,6 +52,7 @@ size: 33:44
 
 </div>
 <div>
+
 - Brain connectivity is \textbf{more similar in identical twins} compared to those of fraternal twins, siblings, and unrelated in all three models.
 
 </div>
@@ -100,6 +102,7 @@ size: 33:44
 **Fig 2:** Overview of the framework for measuring heritability of connectomes.
 
 <br>
+
 **_Human Connectome Project 1200_**
 
 |            | Monozygotic  |  Dizygotic  | Non-twin siblings |
@@ -108,9 +111,14 @@ size: 33:44
 |    Sex     | 196 F, 126 M | 125 F, 87 M |   237 F, 253 M    |
 | Age (mean) |  29.6 (3.3)  | 28.9 (3.4)  |    28.3 (3.9)     |
 
-### Thing we did 2
+### Different Statistical Models of Connectomes
 
-Aliquam sed finibus lacus. In ut nibh mollis, viverra dolor ac, egestas urna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam erat volutpat. Praesent vel condimentum est. Ut vitae velit lacinia, dignissim augue sit amet, bibendum eros. Aliquam erat volutpat. Nam nec suscipit eros.
+![](./ohbm22/Illustrative_example.png)
+**Fig X:** Illustrative examples
+
+- **Exact:** Are they the same?
+- **Global scale:** Are they same after considering global differences?
+- **Vertex scale:** Are they same after considering edge wise differences?
 
 <!-- End main column 1 -->
 </div>
@@ -118,11 +126,15 @@ Aliquam sed finibus lacus. In ut nibh mollis, viverra dolor ac, egestas urna. Pe
 <!-- Start main column 2 -->
 <div>
 
-### Different Statistical Models of Connectomes
+### Examining Distribution
 
-![](./ohbm22/Illustrative_example.png)
+![](./ohbm22/distributions.png)
+**Fig X:** Distributions examples
 
-**Fig X:** Illustrative examples
+### Examining Different Parcellation
+
+![](./ohbm22/results.png)
+**Fig X:** All parcellations examples
 
 ### Limitations and extensions
 
