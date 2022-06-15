@@ -48,33 +48,31 @@ size: 33:44
 <div>
 
 - Understanding how brain connectivity is influenced by genetics can improve our understanding of brain function and diseases.
+
+</div>
+<div>
 - Brain connectivity is \textbf{more similar in identical twins} compared to those of fraternal twins, siblings, and unrelated in all three models.
 
 </div>
-
-<!-- Box col2 -->
 <div>
 
 - Existing methods ignore spatial arrangement of the brain and are not statistically justified.
 
 </div>
-
-<!-- Box col3 -->
 <div>
 
 - Random graph theory and statistical approach enable formulation and testing of different models of connectome heritability.
 
 </div>
-
-<!-- Box col4 -->
 <div>
 
 - Stochastic ordering of similarity, from most similar to least similar, in identical, fraternal twins, siblings and unrelated people.
 
 </div>
 
-<!-- End columns and box -->
+<!-- End columns-box -->
 </div>
+<!-- End box -->
 </div>
 
 <!-- Start main 2 column split for poster -->
@@ -98,9 +96,17 @@ size: 33:44
 
 ## Do changes in genome cause changes in connectomes?
 
-### Thing we did 1
+![](./ohbm22/dag.png)
+**Fig 2:** Overview of the framework for measuring heritability of connectomes.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sodales quam sed felis fringilla cursus. Morbi nec finibus massa. Aenean varius cursus enim vitae sagittis. Proin dictum, erat vitae sollicitudin porttitor, felis risus gravida tortor, vel placerat sem magna eget enim. Aliquam pretium nulla in ultrices venenatis. Nunc sit amet mi gravida, scelerisque turpis ullamcorper, luctus quam. Mauris consequat laoreet nibh a sagittis. Fusce porta, dui sed gravida lacinia, massa tellus varius ante, sit amet sodales erat justo aliquam nulla. Suspendisse commodo finibus nisi quis laoreet. Donec vitae felis volutpat, convallis lectus tincidunt, vestibulum eros.
+<br>
+**_Human Connectome Project 1200_**
+
+|            | Monozygotic  |  Dizygotic  | Non-twin siblings |
+| :--------: | :----------: | :---------: | :---------------: |
+|     N      |     322      |     212     |        490        |
+|    Sex     | 196 F, 126 M | 125 F, 87 M |   237 F, 253 M    |
+| Age (mean) |  29.6 (3.3)  | 28.9 (3.4)  |    28.3 (3.9)     |
 
 ### Thing we did 2
 
@@ -112,9 +118,11 @@ Aliquam sed finibus lacus. In ut nibh mollis, viverra dolor ac, egestas urna. Pe
 <!-- Start main column 2 -->
 <div>
 
-### Thing we did 3
+### Different Statistical Models of Connectomes
 
-<!-- ![](../../../results/figs/thresholding_tests/edge_weight_dist_input_proportion.png) -->
+![](./ohbm22/Illustrative_example.png)
+
+**Fig X:** Illustrative examples
 
 ### Limitations and extensions
 
@@ -157,15 +165,6 @@ Aliquam sed finibus lacus. In ut nibh mollis, viverra dolor ac, egestas urna. Pe
 </div>
 
 <br>
-
-<div class="columns3-np">
-<div>
-
-This work
-
-</div>
-
-</div>
 
 #### Acknowledgements
 
