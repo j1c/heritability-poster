@@ -2,7 +2,7 @@
 marp: false
 theme: poster
 paginate: false
-size: 33:50
+size: a0
 math: katex
 ---
 
@@ -19,7 +19,7 @@ math: katex
 <!-- Title and author information -->
 <div>
 
-# Statistical Modeling of Structural Connectomes Reveal Heritability
+# Statistical Modeling of Structural Connectomes Reveal High Genetic Influence on Connectivity
 
 ## Jaewon Chung<span class=super>1\*</span>, Eric Bridgeford<span class=super>1</span>, Michael Powell<span class=super>1</span>, Joshua T. Vogelstein<span class=super>1</span>
 
@@ -48,27 +48,23 @@ math: katex
 <!-- Box col1 -->
 <div>
 
-- Understanding how brain connectivity is influenced by genetics can improve our understanding of brain function and diseases.
+- Aimed to define heritability for populations of connectomes using statistical modelling.
 
 </div>
 <div>
 
-- Brain connectivity is \textbf{more similar in identical twins} compared to those of fraternal twins, siblings, and unrelated in all three models.
+- Structural connectomes are heritable without controlling for neuroanatomy.
+- Neuroanatomy is also highly heritable
 
 </div>
 <div>
 
-- Existing methods ignore spatial arrangement of the brain and are not statistically justified.
+- Connectomes remain heritable after controlling for effects of neuroanatomy on connectomes.
 
 </div>
 <div>
 
-- Random graph theory and statistical approach enable formulation and testing of different models of connectome heritability.
-
-</div>
-<div>
-
-- Stochastic ordering of similarity, from most similar to least similar, in identical, fraternal twins, siblings and unrelated people.
+- Provide tools for future analysis on populations of connectomes.
 
 </div>
 
@@ -85,25 +81,40 @@ math: katex
 
 ### Motivation
 
-- Connectomes are rich sources of inspiration for architectures in artificial intelligence.
-- Comparing connectomes could help elucidate which structural features are necessary for yielding the capabilities animal intelligences.
-- Bilateral symmetry for connectomes is one such comparison; has been investigated, but not clearly defined as a network hypothesis.
+- Understanding how brain connectivity is influenced by genetics can improve our understanding of brain function and diseases.
+- Current methods of analyzing connectomes or hertability exhibit limitations:
+  - Selection Graph theoretic features
+  - Multivariate normality assumptions
 
-### What are we going to do
+### Overview of Analysis
 
 <!-- Big question for this work -->
 
 ![](./ohbm22/overview.png)
 **Fig 1:** Overview of the framework for measuring heritability of connectomes.
 
-## Do changes in genome cause changes in connectomes?
+<br>
 
-![w:1000px center](./ohbm22/dag.png)
-**Fig 2:** Overview of the framework for measuring heritability of connectomes.
+## Do changes in <span style="color:var(--genome)"> genome </span> cause changes in <span style="color:var(--connectome)">connectomes</span>?
 
 <br>
 
-**_Human Connectome Project 1200_**
+### Causal Analysis of Effect of Genome on Connectomes
+
+<!-- ![w:1100px center](./ohbm22/dag.png) -->
+
+- Genome directly affects the structural connectome.
+- Neuroanatomym (e.g. brain volume) indirectly affects the connectome.
+- Participant history, such as the shared and non-shared environmental influences, and traits are potential confounders.
+- The shared and non-shared environment is controlled by comparing between the same sex individuals.
+
+![center](./ohbm22/dag.png)
+**Fig 2:** Directed acyclic graph (DAG) illustrating potential relationships between the genome and connectome.
+
+### Human Connectome Project 1200
+
+- Structural connectomes are estimated using structural (sMRI) and diffusion magnetic resonance imaging (dMRI).
+- Processed with _m2g_ pipeline, which uses Constrained Spherical Deconvolution (CSD) model and deterministic tractography.
 
 |            | Monozygotic  |  Dizygotic  | Non-twin siblings |
 | :--------: | :----------: | :---------: | :---------------: |
@@ -111,36 +122,42 @@ math: katex
 |    Sex     | 196 F, 126 M | 125 F, 87 M |   237 F, 253 M    |
 | Age (mean) |  29.6 (3.3)  | 28.9 (3.4)  |    28.3 (3.9)     |
 
-### Different Statistical Models of Connectomes
+<div align="center">
 
-![](./ohbm22/Illustrative_example.png)
-**Fig X:** Illustrative examples
+**Table 1:** Participants and their demographics of HCP1200 Dataset.
 
-- **Exact:** Are they the same?
-- **Global scale:** Are they same after considering global differences?
-- **Vertex scale:** Are they same after considering edge wise differences?
-
+</div>
 <!-- End main column 1 -->
 </div>
 
 <!-- Start main column 2 -->
 <div>
 
-### Examining Distribution
+### Three Models of Connectomes
 
-![](./ohbm22/distributions.png)
-**Fig X:** Distributions examples
+- **Exact:** Are the generative models of connectomes the same?
+- **Global scale:** Are the generative models same after considering global scaling?
+- **Vertex scale:** Are the generative models same after considering vertex wise scaling?
 
-### Examining Different Parcellation
+![](./ohbm22/Illustrative_example.png)
+**Fig 3:** Examples of the three different models (exact, global scale, and vertex scale) of connectome heritability visualized as adjacency matrices.
 
-![](./ohbm22/results.png)
-**Fig X:** All parcellations examples
+<br>
+
+### Connectome Validation and Heritability of Neuroanatomy
+
+![](./ohbm22/results_ohbm_1.png)
+**Fig 4:** Validating connectomes by comparing monozygotic and dizygotic twins using Kolmogrov-Smirnov test. Heritability of neuroanamy is tested using unconditional test framework. Red squares indicate significant tests; blue indicate non-significant tests.
+
+### Tests for Heritability of Connectomes
+
+![](./ohbm22/results_ohbm.png)
+**Fig 5:** Testing for unconditional and conditional heritability of connectomes. Red squares indicate significant tests; blue indicate non-significant tests.
 
 ### Limitations and extensions
 
-- Other models to consider (e.g. random dot product graph [3])
-- Other sensible neuron groupings for group connection test
-- Matching nodes across networks leads to new models, likely more power
+- Other staitsical models to consider (e.g. COSIE [3])
+- Repeated analysis on functional MRI or in other twin study datasets.
 
 <!-- Code/Refs/Thanks/Funding - small section -->
 
@@ -220,11 +237,11 @@ NeuroData lab for many ideas and feedback. Many at Microsoft Research for w/ gra
 
 <!-- Need these breaks <br> between refs otherwise formatting breaks for some reason -->
 <footer>
-[1] Chung et al. "The complete connectome of an insect brain," In preparation (2022)
+[1] Chung et al. "Connectomic Heritability," In preparation (2022)
 <br>
 [2] Chung et al. "Statistical connectomics," Ann. Rev. Statistics and its Application (2021)
 <br>
-[3] Athreya et al. "Statistical inference on random dot product graphs: a survey," JMLR (2017)
+[3] Arroyo et al. "Inference for multiple heterogeneous networks with a common invariant subspace," JMLR (2021)
 </footer>
 
 #### Funding
